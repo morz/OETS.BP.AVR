@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Atmega64", "Atmega64\Atmega64.cproj", "{A5C23C4C-0793-408A-8EE8-A556440BED56}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Atmega8", "Atmega8\Atmega8.cproj", "{61690995-D049-47FE-A7BB-12B2F03B0A49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5C23C4C-0793-408A-8EE8-A556440BED56}.Debug|AVR.ActiveCfg = Debug|AVR
+		{A5C23C4C-0793-408A-8EE8-A556440BED56}.Debug|AVR.Build.0 = Debug|AVR
+		{A5C23C4C-0793-408A-8EE8-A556440BED56}.Release|AVR.ActiveCfg = Release|AVR
+		{A5C23C4C-0793-408A-8EE8-A556440BED56}.Release|AVR.Build.0 = Release|AVR
+		{61690995-D049-47FE-A7BB-12B2F03B0A49}.Debug|AVR.ActiveCfg = Debug|AVR
+		{61690995-D049-47FE-A7BB-12B2F03B0A49}.Debug|AVR.Build.0 = Debug|AVR
+		{61690995-D049-47FE-A7BB-12B2F03B0A49}.Release|AVR.ActiveCfg = Release|AVR
+		{61690995-D049-47FE-A7BB-12B2F03B0A49}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
