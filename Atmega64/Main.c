@@ -16,14 +16,12 @@ volatile int display = 0;
 ISR(ADC_vect)
 {
 	// 2.56/1023 = 0,002502 V
-	// если ADC = 188, то 188*0,002502 = 0,470376 V
-	// сейчас ADC = (1023 * 12) / 4 = 3069 = 30.69V
 	if(segment == 1){
-		value = value + (ADC*12)/4;
+		value = value + (ADC*1000)/341; // 3000 => 30.00 V
 	}else{
-		value = value + ADC/2;
+		value = value + (ADC*1000)/2046; // 500 => 5.00 A
 	}
-	adc_counter++;
+	adc_counter++; // увеличиваем значение до 127.
 	ADCSRA |= 1<<ADSC;
 	
 }
@@ -31,6 +29,7 @@ ISR(ADC_vect)
 
 void avr_init()
 {
+	adc_counter=0;
 	DDRC = 0x00;
 	ADCSRA = 0x8F;
 	ADMUX|=(1<<REFS0)|(1<<REFS1); 
@@ -72,7 +71,7 @@ int main(void)
 	
 	while(1)
 	{
-		if (adc_counter > 100)
+		if (adc_counter == 127)
 		{
 			display= value/adc_counter;
 			tiks++;
